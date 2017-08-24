@@ -1,26 +1,34 @@
 # Platform Enablement Technical Test
 
+We would like you to write an application in a language of your choice
+which covers a few points of interest. It will be evaluated holistically,
+so take this as an opportunity to show the breadth of your skills or knowledge.
 
-#### Write an application using your language of choice that does these four things :
+## Application Details
 
-- Make your application root endpoint as simple as possible i.e show a hello world message
-- Create an `/health` endpoint which returns a valid response if your application is up and running
-- Create an `/metadata` endpoint with basic information about your application , such metadata could return a json payload like this:
+Your application should be a simple, small, operable web-style API or service
+provider. It should implement the following:
 
-```
-"Myapplication": [
+- a simple root endpoint which responds in a simple manner; "hello world" or some such
+- a health endpoint which returns an appropriate response code
+- a metadata endpoint which returns basic information about your application; example:
+
+```json
+"myapplication": [
   {
     "version": "1.0",
-    "description" : "Pre-interview technical test",
+    "description" : "pre-interview technical test",
     "lastcommitsha": "abc57858585"
   }
 ]
 ```
 
-- Make sure you add unit and integration tests for your application
+- tests or a test suite; the type of testing is up to you
 
-#### Once you are done the previous steps make sure you :
+## Fit and Finish
 
-- Build a deployable artifact using your preferred isolation technique.
-- Create a pipeline that builds your artifact on every commit, you can use a ci/cd tool like travis or alike
-- Make sure  you write a clear readme file that explains how to run your application
+Once the application has been written, follow up with the following additions:
+
+- provide a means of packaging your application as a single deployable artifact which encapsulates its dependencies
+- create a pipeline that builds your application on each commit; Travis or similar, for example
+- write a clear and understandable `README` which explains your application and its deployment steps
