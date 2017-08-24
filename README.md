@@ -1,7 +1,7 @@
 # Platform Enablement Technical Test
 
 
-#### Write an application using your language of choice that does these three things :
+#### Write an application using your language of choice that does these four things :
 
 - Make your application root endpoint as simple as possible i.e show a hello world message
 - Create an `/health` endpoint which returns a valid response if your application is up and running
