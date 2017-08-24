@@ -27,7 +27,7 @@ provider. It should implement the following:
 
 ## Fit and Finish
 
-Once the application has been written, follow up with the following additions:
+Once the application has been written, continue with the following additions:
 
 - provide a means of packaging your application as a single deployable artifact which encapsulates its dependencies
 - create a pipeline that builds your application on each commit; Travis or similar, for example
