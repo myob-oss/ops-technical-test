@@ -31,5 +31,5 @@ Once the application has been written, continue with the following additions:
 
 - provide a means of packaging your application as a single deployable artifact which encapsulates its dependencies
 - create a pipeline that builds your application on each commit; Travis or similar, for example
-- describe or demonstrate how your application might be exploited and/or how to defend aginst common attack vectors
+- describe or demonstrate any risks associated with your application/deployment
 - write a clear and understandable `README` which explains your application and its deployment steps
