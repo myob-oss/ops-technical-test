@@ -1,0 +1,24 @@
+node{
+ stage('SCM Checkout'){
+    git 'https://github.com/krisinampudi/Myobtest.git'
+ }
+
+ stage('Mvn Package'){
+     def mvnHome = tool name: 'maven-3', type: 'maven'
+     def mvnCMD = "${mvnHome}/bin/mvn"
+         sh "${mvnCMD} clean package"
+   }
+   stage('copy the jar file'){
+     sshagent(['tomcatcred']) 
+     sh 'sudo scp -o StrictHostKeyChecking=no target/*.jar ec2-user@3.91.20.115:/home/ec2-user/apache-tomcat-8.5.46/webapps/'
+}  
+    stage('Run the jar file'){
+      def jenkinshome = 
+        sh "java -jar -Dserver.port=8090' /var/lib/jenkins/workspace/myobtest/target/MyobTestApp-0.0.1-SNAPSHOT.jar"
+    }
+    stage('Email Notification'){
+      mail bcc: '', body: '''Hi Welcome to jenkins email alerts
+      Thanks
+      Kris''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'testrpasoft@gmail.com'
+   }
+}
