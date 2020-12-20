@@ -27,4 +27,9 @@ public class DemoController {
 		response.sendRedirect("actuator/health");
     }
 	
+	@GetMapping("/info")
+    public void getMetadataInfo(HttpServletResponse response) throws IOException {
+		response.sendRedirect("actuator/info");
+    }
+	
 }
