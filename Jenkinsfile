@@ -17,7 +17,7 @@ node('master') {
     	sh "${mvnCMD} clean package"
     }
     stage('Build Image') {
-    	sh "docker build . -t myob && docker run myob"
+    	sh "docker build . -t myob"
     }
     stage('Push Image') {
     	//Pushing to ECR
