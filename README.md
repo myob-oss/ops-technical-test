@@ -30,6 +30,6 @@ e.g.
 Once the application has been written, continue with the following additions:
 
 - provide a means of packaging your application as a single deployable artifact which encapsulates its dependencies
-- create a pipeline that builds your application on each commit; Travis, Github Actions or similar
+- create a pipeline that builds your application on each commit; Travis, Github Actions, or similar
 - describe or demonstrate any risks associated with your application/deployment
 - write a clear and understandable `README` which explains your application and its packaging steps, as well as how it meets requirements
