@@ -2,7 +2,7 @@
 
 We would like you to write an application in a language of your choice
 which covers a few points of interest. It will be evaluated holistically,
-so take this as an opportunity to show the breadth of your skills or knowledge.
+so take this as an opportunity to demonstrate your skills.
 
 ## Application Details
 
@@ -11,8 +11,8 @@ provider. It should implement the following:
 
 - a simple root endpoint which responds in a simple manner; "hello world" or some such
 - a health endpoint which returns an appropriate response code
-- a metadata endpoint which returns basic information about your application; example:
-
+- a metadata endpoint which returns basic information about your application, including version and associated git hash:
+e.g.
 ```json
 "myapplication": [
   {
@@ -23,13 +23,13 @@ provider. It should implement the following:
 ]
 ```
 
-- tests or a test suite; the type of testing is up to you
+- tests or a test suite.s
 
 ## Fit and Finish
 
 Once the application has been written, continue with the following additions:
 
 - provide a means of packaging your application as a single deployable artifact which encapsulates its dependencies
-- create a pipeline that builds your application on each commit; Travis or similar, for example
+- create a pipeline that builds your application on each commit; Travis, Github Actions or similar
 - describe or demonstrate any risks associated with your application/deployment
-- write a clear and understandable `README` which explains your application and its deployment steps
+- write a clear and understandable `README` which explains your application and its packaging steps, as well as how it meets requirements
