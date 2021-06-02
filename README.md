@@ -9,7 +9,7 @@ so take this as an opportunity to demonstrate your skills.
 Your application should be a simple, small, operable web-style API or service
 provider. It should implement the following:
 
-- a simple root endpoint which responds in a simple manner; "hello world" or some such
+- a simple root endpoint which responds in a simple manner; "hello world".
 - a health endpoint which returns an appropriate response code
 - a metadata endpoint which returns basic information about your application, including version and associated git hash:
 e.g.
@@ -23,7 +23,7 @@ e.g.
 ]
 ```
 
-- tests or a test suite.s
+- tests or a test suite
 
 ## Fit and Finish
 
